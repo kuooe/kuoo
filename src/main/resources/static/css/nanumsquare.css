@@ -1,0 +1,32 @@
+@font-face {
+ font-family:"Noto Sans KR";
+ font-weight: 400;
+ src: url(/css/font/NanumSquareR.eot);
+ src: url(/css/font/NanumSquareR.eot?#iefix) format('embedded-opentype'),
+      url(/css/font/NanumSquareR.woff) format('woff'),
+      url(/css/font/NanumSquareR.ttf) format('truetype');
+}
+@font-face {
+ font-family:"Noto Sans KR";
+ font-weight: 700;
+ src: url(/css/font/NanumSquareB.eot);
+ src: url(/css/font/NanumSquareB.eot?#iefix) format('embedded-opentype'),
+      url(/css/font/NanumSquareB.woff) format('woff'),
+      url(/css/font/NanumSquareB.ttf) format('truetype');
+}
+@font-face {
+ font-family:"Noto Sans KR";
+ font-weight: 800;
+ src: url(/css/font/NanumSquareEB.eot);
+ src: url(/css/font/NanumSquareEB.eot?#iefix) format('embedded-opentype'),
+      url(/css/font/NanumSquareEB.woff) format('woff'),
+      url(/css/font/NanumSquareEB.ttf) format('truetype');
+}
+@font-face {
+ font-family:"Noto Sans KR";
+ font-weight: 300;
+ src: url(/css/font/NanumSquareL.eot);
+ src: url(/css/font/NanumSquareL.eot?#iefix) format('embedded-opentype'),
+      url(/css/font/NanumSquareL.woff) format('woff'),
+      url(/css/font/NanumSquareL.ttf) format('truetype');
+}

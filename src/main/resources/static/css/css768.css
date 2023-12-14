@@ -1,0 +1,51 @@
+@media only screen and (max-width: 768px) {
+
+	.gr			{flex-direction:column; margin-bottom:1rem; }
+	.container	{flex-direction:inherit; height:inherit;}
+	.content	{min-width:100%;padding:0 0 0 4rem; display:block;  background:#FFFFFF;}
+	.sidebar	{z-index:1000;} 
+	.openbtn	{position:fixed; top:1rem; left:2rem;}
+	.card		{padding:10px; box-shadow:none; border:none;}
+	.card-body	{padding:0;}
+	.md			{margin:0;}
+	table		{overflow-y:scroll; display:block;}
+	.logo		{position:absolute; top:0.8rem; left:3rem; width:auto ; margin-left:2rem; background-color:transparent;}
+	.dp-f		{flex-direction:column;}
+	.f-column > div	{margin:0;}
+	button		{margin:0.5rem 0 0 0;}
+ 
+	.mr-1	{margin-right:0;}
+	.mr-2	{margin-right:0;}
+	.mr-3	{margin-right:0;}
+	.mr-4	{margin-right:0;}
+	.mr-5	{margin-right:0;}
+	
+	.ml-1	{margin-left:0;}
+	.ml-2	{margin-left:0;}
+	.ml-3	{margin-left:0;}
+	.ml-4	{margin-left:0;}
+	.ml-5	{margin-left:0;}
+	
+	label	{margin:1rem 0;}
+	.md1-t	{width:calc(100% - 0px); margin-bottom:0.2rem;}
+	.md2-t	{width:calc(100% - 0px); margin-bottom:0.2rem;}
+	.md3-t	{width:calc(100% - 0px); margin-bottom:0.2rem;}
+	.md4-t	{width:calc(100% - 0px); margin-bottom:0.2rem;}
+	.md5-t	{width:calc(100% - 0px); margin-bottom:0.2rem;}
+	.md6-t	{width:calc(100% - 0px); margin-bottom:0.2rem;}
+	.md7-t	{width:calc(100% - 0px); margin-bottom:0.2rem;}
+	.md8-t	{width:calc(100% - 0px); margin-bottom:0.2rem;}
+	.md9-t	{width:calc(100% - 0px); margin-bottom:0.2rem;}
+	.md10-t	{width:calc(100% - 0px); margin-bottom:0.2rem;}
+	
+	.md1	{width:calc(100% - 0px); margin-bottom:0.2rem;}
+	.md2	{width:calc(100% - 0px); margin-bottom:0.2rem;}
+	.md3	{width:calc(100% - 0px); margin-bottom:0.2rem;}
+	.md4	{width:calc(100% - 0px); margin-bottom:0.2rem;}
+	.md5	{width:calc(100% - 0px); margin-bottom:0.2rem;}
+	.md6	{width:calc(100% - 0px); margin-bottom:0.2rem;}
+	.md7	{width:calc(100% - 0px); margin-bottom:0.2rem;}
+	.md8	{width:calc(100% - 0px); margin-bottom:0.2rem;}
+	.md9	{width:calc(100% - 0px); margin-bottom:0.2rem;}
+	.md10	{width:calc(100% - 0px); margin-bottom:0.2rem;}
+}

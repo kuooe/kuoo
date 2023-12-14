@@ -1,0 +1,95 @@
+@charset "utf-8";
+*{padding: 0; margin: 0;;}
+.it1{font-family: 'Pretendard'; line-height: 160%; padding:} 
+.it1 ul, dl{list-style: none;  }
+.it1 ul {margin: 1rem;}
+.it1 ol{margin:0 1.5rem; }
+.it1 li{list-style-position: outside; list-style-type: "-"; padding-left:0.5rem ; margin-left:1rem; margin-bottom: 0.3rem;}
+.it1 ol li{list-style-type: decimal;}
+.it1 p{padding:1rem 2rem;}
+.it1 {   margin: 0 auto;}
+.it1 .title{font-size: 2rem; width: 100%;  margin: 1rem 0;  line-height: 150%; }
+.it1 .tst1{border-bottom:  double #8d8d8d; text-align: center;}
+.it1 .tst2{border:  double #8d8d8d; text-align: center; border-radius: 10rem;}
+.it1 .tst3{border: 2px solid #8d8d8d; text-align: center; padding: 0.35rem 0; background-color: rgba(255, 255, 248, 0.5); }
+.it1 h2{font-size: 1.1rem; display: flex;  }
+.it1 h2 span{display: inline-block ; margin-right: 0.5rem;}
+.it1 h2 span::before{content:"※";  }
+.it1 h3{margin:1rem 0 0; font-size: 1rem;}
+.it1 h3::before{content: "▶"; padding: 0 0.5rem 0 0;}
+.it1 h4{font-weight: normal; font-size: 1.05rem; margin:0;}
+.it1 dl{display: flex; align-items: center; font-size: 1.3rem; margin-left: 1.2rem; align-items: center;}
+.it1 dt{   display: inline-block; font-weight: 600; line-height: 200%;  }
+ 
+ 
+.it1 dt::before{content: "◆"; padding-right: 0.3rem;}
+.it1 dt::after{content: ":"; padding:0 1rem;}
+.it1 dd {display: flex; justify-content: space-between; margin-bottom: 0; }
+.it1 dd p{margin:0 0 0 0;}
+.it1 dd p span{width: 8rem; display: inline-block;}
+ 
+ 
+.it1 .box{border-radius: 0.4rem; box-shadow: 0.2rem 0.2rem 0.2rem rgba(0,0,0,.05); padding:0.7rem 1.3rem; border: 1px solid #8d8d8d; margin-bottom: 1rem; }
+.it1 .box ul{margin: 1rem 0 0;}
+.it1 .box .title{margin: 0 0 1rem 0;}
+.it1 .box h3{margin:1rem 0;}
+.it1 .fc-red{color:rgb(255, 0, 0)}
+
+.it1 .table{  overflow-x: auto;}
+.it1 .table{border: 1px solid #333;}
+.it1 .table td{border: 1px solid #333;}
+.it1 .table th{border:  1px solid #333;}
+.it1 table{width: 100%;  text-align: center; min-width: 550px; }
+.it1 th, td{padding: 0.5rem 0;  }
+.it1 th{background: #e7e6f3; text-align: center; font-size: 1.2rem;}
+.it1 td{border-top: 1px solid #e8e8f1; text-align: center;  font-size: 0.9rem;}
+
+.it1 .card{  margin: 0 auto; margin:1rem 0; border: 1px solid #333; padding: 2rem;;}
+.it1 .card h4{background: #0c2763; text-align: center; color: #fff; padding: 0.7rem; margin:0; font-size: 1.3rem;}
+.it1 .card dl{font-size: 1.05rem;}
+.it1 .card p{  text-align: center; padding: 0;}
+
+.it1 .bgg{background: #eaeaee;}
+
+.it1 .name {font-size: 1.5rem; font-weight: bold; padding: 1rem 0;}
+.it1 .name span{width: 8rem; display: inline-block; border-bottom: 2px solid; }
+
+.it1 .date{width: 100%; }
+.it1 .date ul{display: flex; justify-content: flex-end;}
+ 
+.it1 .date ul li::before{content: none;}
+.it1 .date ul li span{width: 5rem; display: inline-block;}
+
+
+
+.it1 .if-f{display: flex; justify-content: space-between; flex-wrap: wrap; font-size: 78%;}
+.it1 .item{width: 46%; }
+.it1 .item ol{margin: 0 ;}
+.it1 .item p{padding: 0 0 0 0;}
+.it1 .item ul{padding: 0; margin: 0;}
+.it1 .if-f .box{padding: 0 0.5rem; border-radius: 0;}
+ 
+.it1 .if-f .box ul{margin:0; }
+.it1 .if-f .box p{padding: 0;}
+.it1 .if-f .box h3{background: #0c2763; color: #fff;margin-top: 0.5rem; padding: 0.3rem;  border: 0; word-break: break-all; font-size: 0.9rem; font-weight: normal;  }
+ 
+.it1 .st{display: flex; flex-wrap: wrap; justify-content: space-between; margin: 0; }
+ 
+.it1 .st li{width: 100%;  margin: 0; padding: 0; list-style: none;   }
+ 
+.it1 .st li ol{margin: 0;  display: flex;   flex-wrap: wrap; justify-content: space-between; }
+.it1 .st ol li{align-items: center; border:none;  text-align: center;   font-size: 0.8rem;   word-break: keep-all; background: #eaeaee;  width: 49%; padding: 0.05rem; margin: 0.05rem 0 0.08rem ;}
+ 
+.st ol li:last-child:after{content: ""; padding: 0 0.3rem; font-weight: bold;}
+.it1 .item .title{font-weight: bold; font-size: 1.05rem; text-align: center; border: 1px solid #333; display: block; width: 100%; margin:0.3rem 0;}
+@media (max-width: 500px) {
+    .it1 .title{font-size: 1.58rem;  word-break: keep-all; padding: 1rem 0;}
+    .it1 .tst2{border:  double #8d8d8d; text-align: center; border-radius: 1rem;}
+    .it1 .tst1{border-bottom:  double #8d8d8d; text-align: center;}
+	.it1 dl{flex-direction: column; align-items: flex-start;}
+    .it1 dd{margin-left: 1.5rem;}
+    .it1 dd p{margin-left:0rem;}
+
+    .it1 .card{padding: 0.5rem;}
+	.it1 .item{width: 100%;}
+}

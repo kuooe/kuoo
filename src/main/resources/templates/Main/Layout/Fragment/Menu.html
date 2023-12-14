@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<title>MENU</title>
+</head>
+<body>
+
+	<aside class="main-sidebar sidebar-dark-primary elevation-4" th:fragment="menu">
+		<div class="brand-link">
+			<div class="brand-image bg-light ml-0 mr-0 pl-3" style="width:100%; border-radius: .25rem;">
+				<img src="/images/emobile_logo.png" alt="Admin Logo" style="height:33px;">
+			</div>
+		</div>
+		<div class="sidebar">
+			<!-- Sidebar user panel (optional) -->
+			<div class="user-panel mt-2 pb-2 mb-2 mr-0 d-flex">
+				<div class="image pl-0">
+					<img src="/images/profile.png" class="img-circle elevation-2" alt="User Image">
+				</div>
+				<div class="info" style="width:100px;">
+					<form name="AdmUserFrm" id="AdmUserFrm" method="post" action="">
+					<input type="hidden" name="userSeq"		id="userMySeq"	value=""/>
+					<input type="hidden" name="userView"	id="userMyView"	value="M"/>
+					</form>
+					<a href="#" class="d-block font-weight-bold" th:text="${session.userSession.userName}"></a>
+				</div>
+				<div class="float-right d-none d-sm-inline-block pt-1" style="width:100%;">
+					<div class="btn-group float-right">
+						<button type="button" class="btn btn-info btn-xs" th:if="${session.userSession.userSeq ne '0'}" th:onClick="_showModal('/Admin/UserDetail.do','AdmUserFrm','userMySeq',[[${session.userSession.userSeq}]], 'modal-lg-form');"><i class="fas fa-user"> 보기</i></button>
+						<button type="button" class="btn btn-default btn-xs" th:onClick="_movePage('/LogoutAction.do');"><i class="fas fa-user-slash"></i> 로그아웃</button>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Sidebar Menu -->
+			<nav class="mt-2" style="font-size: 0.9rem;">
+				<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+					<li class="nav-item">
+						<a href="/Admin/DashBoard.do" class="nav-link" th:classappend="${menuOrder eq '0'} ? active">
+							<i class="nav-icon fas fa-tachometer-alt"></i>
+							<span>Dashboard</span>
+						</a>
+					</li>
+					
+					<li th:each="menuVO : ${@serviceReset.getMenu()}" class="nav-item" th:classappend="${menuVO.menuOrder eq menuOrder} ? menu-open">
+						<!-- <a class="nav-link" style="cursor: pointer;" th:classappend="${menuVO.menuOrder eq menuOrder} ? active"  th:onClick="_menuAuthCheck([[${session.userSession.userLevel}]],'', [[${menuVO.menuLink}]], [[${session.userSession.userAuth.get(menuVOStat.index).userAuthUse}]], [[${session.userSession.userAuth.get(menuVOStat.index).userAuthRead}]], [[${session.userSession.userAuth.get(menuVOStat.index).userAuthWrite}]], [[${session.userSession.userAuth.get(menuVOStat.index).userAuthDelete}]]);"> -->
+						<a class="nav-link" style="cursor: pointer;" th:classappend="${menuVO.menuOrder eq menuOrder} ? active"  th:onClick="_authCheck([[${session.userSession.userLevel}]], 'use', [[${session.userSession.userAuth.get(menuVOStat.index).userAuthUse}]], [[${menuVO.menuLink}]], 'move');">
+							<i class="nav-icon fas fa-list"></i>
+							<span>
+								<th:block th:text="${menuVO.menuName}" />
+								<i th:if="${menuVO.menuLink eq ''}" class="right fas fa-angle-left"></i>
+							</span>
+						</a>
+						
+						<ul th:if="${#lists.size(menuVO.menuList) > 0}" class="nav nav-treeview" style="font-size: 0.8rem;">
+							<li th:each="subMenuVO : ${menuVO.menuList}" class="nav-item" >
+								<!-- <a class="nav-link" style="cursor: pointer;" th:classappend="${menuVO.menuOrder eq menuOrder && subMenuVO.menuStep eq menuStep} ? active" th:onClick="_menuAuthCheck([[${session.userSession.userLevel}]],'', [[${subMenuVO.menuLink}]], [[${session.userSession.userAuth.get(menuVOStat.index).userAuthUse}]], [[${session.userSession.userAuth.get(menuVOStat.index).userAuthRead}]], [[${session.userSession.userAuth.get(menuVOStat.index).userAuthWrite}]], [[${session.userSession.userAuth.get(menuVOStat.index).userAuthDelete}]]);"> -->
+								<a class="nav-link" style="cursor: pointer;" th:classappend="${menuVO.menuOrder eq menuOrder && subMenuVO.menuStep eq menuStep} ? active" th:onClick="_authCheck([[${session.userSession.userLevel}]],'use', [[${session.userSession.userAuth.get(menuVOStat.index).userAuthUse}]], [[${subMenuVO.menuLink}]], 'move');">
+									<i class="far fa-circle nav-icon"></i>
+									<span th:text="${subMenuVO.menuName}"></span>
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+	
+</body>
+</html>

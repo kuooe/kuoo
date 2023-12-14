@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<!--
+	Full Motion by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+
+<head>
+    <title>Full Motion</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../templates/shop/assets/css/main.css">
+    
+     <!-- 추가된 스타일 -->
+    <style>
+        .login-button, .signup-button {
+            text-align: center; /* 가운데 정렬 */
+            margin-top: 10px; /* 상단 여백 조절 */
+        }
+
+        .login-button button,
+        .signup-button button {
+            margin-top: 10px; /* 버튼 간 여백 조절 */
+            width: 100%;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            color: white;
+            vertical-align: middle; /* 버튼 텍스트 상단 정렬 */
+        }
+
+        .login-button button {
+            background-color: #4CAF50; /* 로그인 버튼 색상 */
+        }
+
+        .signup-button button {
+            background-color: #3498db; /* 회원가입 버튼 색상 */
+        }
+
+        /* 추가된 로그인 창 스타일 */
+        .login-form, .signup-form {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .login-form input, .signup-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body id="top">
+
+    <!-- Banner -->
+    <!--
+				To use a video as your background, set data-video to the name of your video without
+				its extension (eg. images/banner). Your video must be available in both .mp4 and .webm
+				formats to work correctly.
+			-->
+	
+    <section id="banner" data-video="../templates/shop/images/banner">
+    	
+        <div class="inner">
+            <header>
+                <h1>LOGIN</h1>
+        </div>
+        
+                    <!-- Add a login button -->
+
+    </section>
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Boxes -->
+            <div class="thumbnails">
+                <!-- ... (기존 상자 내용) ... -->
+            </div>
+
+            <!-- 로그인 창 추가 -->
+            <div class="login-form">
+            	<form id="AdmFrm" name="AdmFrm">
+	                <input id="userId" name="userId"  type="text" placeholder="아이디">
+	                <input id="userPw" name="userPw" type="password" placeholder="비밀번호">
+            	</form>
+                <div class="login-button">
+                    <button>로그인</button>
+                </div>
+            </div>
+
+            <!-- 회원가입 창 추가 -->
+            <div class="signup-form">
+            
+                <div class="signup-button">
+                    <button onclick="window.location.href='/Vopet/Join.do'">회원가입</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <h2>Etiam veroeros lorem</h2>
+            <p>Pellentesque eleifend malesuada efficitur. Curabitur volutpat dui mi, ac imperdiet dolor tincidunt nec. Ut erat lectus, dictum sit amet lectus a, aliquet rutrum mauris. Etiam nec lectus hendrerit, consectetur risus viverra, iaculis orci. Phasellus eu nibh ut mi luctus auctor. Donec sit amet dolor in diam feugiat venenatis. </p>
+
+            <ul class="icons">
+                <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+        </div>
+    </footer>
+    <div class="copyright">
+        Site made with: <a href="https://templated.co/">Templated</a>.
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../templates/shop/assets/js/jquery.min.js"></script>
+    <script src="../templates/shop/assets/js/jquery.scrolly.min.js"></script>
+    <script src="../templates/shop/assets/js/jquery.poptrox.min.js"></script>
+    <script src="../templates/shop/assets/js/skel.min.js"></script>
+    <script src="../templates/shop/assets/js/util.js"></script>
+    <script src="../templates/shop/assets/js/main.js"></script>
+</body>
+
+<script> 
+
+
+$(document).ready(function () {
+    // 로그인 버튼 클릭 시 이벤트
+    $(".login-button button").click(function () {
+        // 입력된 데이터 가져오기
+        var userId = $("#userId").val();
+        var userPw = $("#userPw").val();
+
+        // 간단한 입력 유효성 검사 (추후 필요에 따라 보강 가능)
+        if (!userId || !userPw) {
+            alert("아이디와 비밀번호를 입력하세요.");
+            return;
+        }
+		let frmData = $('#AdmFrm').serialize();
+
+        $.ajax({
+            type: "POST",
+            url: "/Vopet/LoginAction.do",
+            data: frmData,
+            dataType: 'json',
+            success: function (response) {
+                if (response.rtnFlag === "Y") {
+      alert("알럿");
+      location.href = "naver.com";
+                    // 로그인 성공 후 필요한 작업 수행
+                } else {
+                    alert("로그인 실패: " + response.rtnMsg);
+                }
+            },
+            error: function () {
+                alert("서버와의 통신 중 오류가 발생했습니다.");
+            }
+        });
+    });
+});
+
+</script>
+
+
+
+
+</html>

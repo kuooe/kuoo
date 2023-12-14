@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frog Clicker Game</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #e0f7fa;
+            flex-direction: column;
+        }
+
+        #frog {
+            width: 200px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        #log {
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <img id="frog" src="frog.png" alt="Frog" onclick="clickFrog()">
+    <div id="log"></div>
+
+    <script>
+        function clickFrog() {
+            // 개구리 입 벌리기
+            document.getElementById('frog').src = 'open-mouth-frog.png';
+
+            // 클릭 정보 업데이트 요청 보내기
+            fetch('/clickFrog', {
+                method: 'GET'
+            })
+            .then(response => response.text())
+            .then(message => {
+                // 서버에서의 응답을 로그에 출력
+                const logElement = document.getElementById('log');
+                logElement.innerHTML = message + '<br>' + logElement.innerHTML;
+
+                // 개구리 이미지 복원
+                document.getElementById('frog').src = 'frog.png';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                // 개구리 이미지 복원
+                document.getElementById('frog').src = 'frog.png';
+            });
+        }
+    </script>
+
+</body>
+</html>

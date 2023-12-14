@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<title>e모바일 전자고지 1.0</title>
+</head>
+<body>
+
+<!-- 팝업 레이어 시작 -->
+<div th:fragment="poplayer">
+<div class="popLayerDiv">
+	<div class="popContent" id="popMsgDiv">
+		<div class='popBody'></div>
+	</div>
+</div>
+<input type='hidden' name='nextType' id='nextType' value=''>
+<input type='hidden' name='nextLink' id='nextLink' value=''>
+<!-- 팝업 레이어 종료 -->
+
+<div class="popupDiv">
+	<div class="popupCont" id="popupMsg">
+		<div class='popupBody'></div>
+	</div>
+</div>
+</div>
+
+</body>
+</html>

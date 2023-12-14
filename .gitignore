@@ -1,0 +1,8 @@
+
+### IntelliJ IDEA ###
+.idea
+*.iml
+out
+gen
+.gradle
+build

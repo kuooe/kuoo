@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<title>poploging</title>
+</head>
+<body>
+
+<div th:fragment="poploging">
+<div id="lodingMsg" class="loding" style="display:none;top:0px;left:0px;" onClick="$.unblockUI();">
+	<dl>
+		<dt>로딩 중입니다.</dt>
+		<dd>잠시만 기다려주세요.</dd>
+		<dd><img src="/images/loding_bar.gif" alt=""></dd>
+	</dl>
+</div>
+</div>
+
+</body>
+</html>

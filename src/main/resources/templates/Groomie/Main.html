@@ -1,0 +1,229 @@
+<!DOCTYPE HTML>
+<!--
+	Transitive by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+
+<head>
+    <title>GROOMIE by kuoo</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../templates/groomie/assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        #loadingSpinner {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+        }
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5378437199783319"
+     crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<form name="AdmPopFrm" id="AdmPopFrm">
+    <input type="hidden" name="latitude" id="latitude" value="" /> <!-- 사용자 위도-->
+    <input type="hidden" name="nLongitude" id="nLongitude" value="" /> <!-- 사용자 경도-->
+    <input type="hidden" name="addressName1" id="addressName1" value="" /> <!-- 사용자 주소-->
+    <input type="hidden" name="temperature" id="temperature" value="" /> <!-- 사용자 온도-->
+    <input type="hidden" name="addressName1" id="weatherDescription" value="" /> <!-- 사용자 날씨-->
+    <input type="hidden" name="weatherCode" id="weatherCode" value="" /> <!-- 사용자 날씨 코드-->
+</form>
+
+<!-- Header -->
+<header id="header" class="alt">
+    <div class="logo"><a href="index.html">GROOMIE <span>by kuoo</span></a></div>
+    <a href="#menu" class="toggle"><span>Menu</span></a>
+</header>
+
+<!-- Nav -->
+<nav id="menu">
+    <ul class="links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="generic.html">Generic</a></li>
+        <li><a href="elements.html">Elements</a></li>
+    </ul>
+</nav>
+
+<!-- Banner -->
+<section id="banner" data-video="images/banner">
+    <div class="inner">
+        <h1>그루미</h1>
+        <p>현재 날씨 온도 조회 옷추천받기</p>
+        <button class="button special" onclick="getLocation()">Get Started</button>
+    </div>
+</section>
+
+<!-- One -->
+<section id="one" class="wrapper style2">
+    <div class="inner">
+        <div>
+            <div class="box">
+                <div class="image fit">
+                </div>
+
+                <div class="content">
+                    <header class="align-center">
+                        <h2>Lorem ipsum dolor</h2>
+                        <p>maecenas feugiat ex purus, quis volutpat lacus placerat</p>
+                    </header>
+                    <hr>
+                    <p> Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet
+                        tortor velit. Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis
+                        volutpat lacus placerat malesuada. Praesent in sem ex. Morbi mattis sapien pretium tellus
+                        venenatis, at egestas urna ornare.</p>
+                    <p>Vivamus fermentum nibh vel pharetra blandit. Cras a purus urna. Sed et libero ex. Orci varius
+                        natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse id
+                        hendrerit felis. Nulla viverra tempor dui at congue. Pellentesque quis nulla ornare, congue
+                        nisi id, finibus nulla. Aliquam sit amet hendrerit purus. Donec libero massa, posuere fermentum
+                        eros sit amet, maximus fringilla augue. Maecenas at rhoncus lorem. Vivamus ultricies consequat
+                        est, efficitur convallis libero. Vivamus rutrum semper mauris, vitae consequat eros tempor ac.
+                        Pellentesque et ornare sapien</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Two -->
+<section id="four" class="wrapper style3">
+    <div class="inner">
+
+        <header class="align-center">
+            <h2>Morbi interdum mollis sapien</h2>
+            <p>Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor
+                velit. Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis volutpat
+                lacus placerat malesuada. Praesent in sem ex. Morbi mattis sapien pretium tellus venenatis, at
+                egestas urna ornare.</p>
+        </header>
+    </div>
+</section>
+
+<!-- Footer -->
+<div id="loadingSpinner">
+    <i class="fas fa-spinner fa-spin fa-3x"></i>
+</div>
+
+<footer id="footer" class="wrapper">
+    <div class="inner">
+        <section>
+            <div class="box">
+                <div class="content">
+                    <h2 class="align-center">Get in Touch</h2>
+                    <hr>
+                    <form action="#" method="post">
+                        <div class="field half first">
+                            <label for="name">Name</label>
+                            <input name="name" id="name" type="text" placeholder="Name"></div>
+                        <div class="field half">
+                            <label for="email">Email</label>
+                            <input name="email" id="email" type="email" placeholder="Email"></div>
+                        <div class="field">
+                            <label for="dept">Department</label>
+                            <div class="select-wrapper">
+                                <select name="dept" id="dept">
+                                    <option value="">- Category -</option>
+                                    <option value="1">Manufacturing</option>
+                                    <option value="1">Shipping</option>
+                                    <option value="1">Administration</option>
+                                    <option value="1">Human Resources</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" rows="6" placeholder="Message"></textarea></div>
+                        <ul class="actions align-center">
+                            <li><input value="Send Message" class="button special" type="submit"></li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="../templates/groomie/assets/js/jquery.min.js"></script>
+<script src="../templates/groomie/assets/js/jquery.scrolly.min.js"></script>
+<script src="../templates/groomie/assets/js/jquery.scrollex.min.js"></script>
+<script src="../templates/groomie/assets/js/skel.min.js"></script>
+<script src="../templates/groomie/assets/js/util.js"></script>
+<script src="../templates/groomie/assets/js/main.js"></script>
+<script src="/script/common.js"></script>
+<script>
+    var weatherDescription = '';
+
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+            alert("이 브라우저에서는 위치 정보를 지원하지 않습니다.");
+        }
+    }
+
+    function showPosition(position) {
+        $('#latitude').val(position.coords.latitude);
+        $('#nLongitude').val(position.coords.longitude);
+        let frmData = $('#AdmPopFrm').serialize();
+        _lodingOn();
+        $.ajax({
+            url: '/Groomie/LocationView.do',
+            type: 'POST',
+            data: frmData,
+            dataType: 'json',
+            success: function (data) {
+                _loadingOff();
+                
+	            let newForm = $('<form action="/Groomie/NaverClothesView.do" method="post"></form>');
+	            newForm.append('<input type="hidden" name="latitude" value="' + data.latitude + '">');
+	            newForm.append('<input type="hidden" name="nLongitude" value="' + data.nLongitude + '">');
+	            newForm.append('<input type="hidden" name="addressName1" value="' + data.addressName1 + '">');
+	            newForm.append('<input type="hidden" name="temperature" value="' + data.temperature + '">');
+	            newForm.append('<input type="hidden" name="weatherDescription" value="' + data.weatherDescription + '">');
+	            newForm.append('<input type="hidden" name="weatherCode" value="' + data.weatherCode + '">');
+
+	            // 생성한 폼을 body에 추가하고 submit
+	           	$('body').append(newForm);
+	            newForm.submit();
+            }
+        });
+    }
+
+    function showError(error) {
+        switch (error.code) {
+            case error.PERMISSION_DENIED:
+                alert("사용자가 위치 정보 제공을 거부했습니다.");
+                break;
+            case error.POSITION_UNAVAILABLE:
+                alert("위치 정보를 사용할 수 없습니다. (예: GPS가 꺼져 있거나 기기가 위치 정보를 지원하지 않을 때)");
+                break;
+            case error.TIMEOUT:
+                alert("위치 정보를 가져오는 데 시간이 초과되었습니다.");
+                break;
+            case error.UNKNOWN_ERROR:
+                alert("알 수 없는 오류가 발생했습니다.");
+                break;
+        }
+    }
+
+    function _lodingOn() {
+        $('#loadingSpinner').css('display', 'block');
+    }
+
+    function _loadingOff() {
+        $('#loadingSpinner').css('display', 'none');
+    }
+</script>
+
+</body>
+
+</html>

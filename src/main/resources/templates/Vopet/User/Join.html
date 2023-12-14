@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<!--
+	Full Motion by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+
+<head>
+    <title>Full Motion</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../templates/shop/assets/css/main.css">
+    
+    <!-- 추가된 스타일 -->
+    <style>
+        .login-button, .signup-button {
+            text-align: center; /* 가운데 정렬 */
+            margin-top: 10px; /* 상단 여백 조절 */
+        }
+
+        .login-button button,
+        .signup-button button {
+            margin-top: 10px; /* 버튼 간 여백 조절 */
+            width: 100%;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            color: white;
+            vertical-align: middle; /* 버튼 텍스트 상단 정렬 */
+        }
+
+        .login-button button {
+            background-color: #4CAF50; /* 로그인 버튼 색상 */
+        }
+
+        .signup-button button {
+            background-color: #3498db; /* 회원가입 버튼 색상 */
+        }
+
+        /* 추가된 로그인 창 스타일 */
+        .login-form, .signup-form {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .login-form input, .signup-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .signup-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body id="top">
+
+    <!-- Banner -->
+    <section id="banner" data-video="../templates/shop/images/banner">
+    	
+        <div class="inner">
+            <header>
+                <h1>JOIN</h1>
+        </div>
+        
+                    <!-- Add a login button -->
+
+    </section>
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Boxes -->
+            <div class="thumbnails">
+                <!-- ... (기존 상자 내용) ... -->
+            </div>
+
+
+            <!-- 회원가입 창 추가 -->
+            <div class="signup-form">
+            	<form id="AdmFrm" name="AdmFrm">
+            		<input id="userId" name="userId" type="text" placeholder="아이디">
+	                <input id="userPw" name="userPw" type="password" placeholder="비밀번호">
+	                <input type="password" placeholder="비밀번호확인">
+	                <input id="userName" name="userName" type="text" placeholder="닉네임">
+	                <input id="userMail" name="userMail" type="email" placeholder="메일 주소(계정찾기)">
+                <form>
+                <div class="signup-button">
+                    <button>회원가입</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <h2>Etiam veroeros lorem</h2>
+            <p>Pellentesque eleifend malesuada efficitur. Curabitur volutpat dui mi, ac imperdiet dolor tincidunt nec. Ut erat lectus, dictum sit amet lectus a, aliquet rutrum mauris. Etiam nec lectus hendrerit, consectetur risus viverra, iaculis orci. Phasellus eu nibh ut mi luctus auctor. Donec sit amet dolor in diam feugiat venenatis. </p>
+
+            <ul class="icons">
+                <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+        </div>
+    </footer>
+    <div class="copyright">
+        Site made with: <a href="https://templated.co/">Templated</a>.
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../templates/shop/assets/js/jquery.min.js"></script>
+    <script src="../templates/shop/assets/js/jquery.scrolly.min.js"></script>
+    <script src="../templates/shop/assets/js/jquery.poptrox.min.js"></script>
+    <script src="../templates/shop/assets/js/skel.min.js"></script>
+    <script src="../templates/shop/assets/js/util.js"></script>
+    <script src="../templates/shop/assets/js/main.js"></script>
+    
+</body>
+
+<script> 
+$(document).ready(function () {
+    // 회원가입 버튼 클릭 시 이벤트
+    $(".signup-button button").click(function () {
+        // 입력된 데이터 가져오기
+        var nickname = $("input[placeholder='닉네임']").val();
+        var userId = $("input[placeholder='아이디']").val();
+        var password = $("input[placeholder='비밀번호']").val();
+        var confirmPassword = $("input[placeholder='비밀번호확인']").val();
+        var email = $("input[placeholder='메일 주소(계정찾기)']").val();
+
+        // 간단한 입력 유효성 검사 (추후 필요에 따라 보강 가능)
+        if (!nickname || !userId || !password || !confirmPassword || !email) {
+            alert("모든 데이터를 입력하세요.");
+            return;
+        }
+
+        // 비밀번호 확인
+        if (password !== confirmPassword) {
+            alert("비밀번호가 일치하지 않습니다.");
+            return;
+        }
+        
+        // 이메일 형식 체크 (간단한 형식으로만 체크)
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert("올바른 이메일 주소 형식이 아닙니다.");
+            return;
+        }
+        
+		let frmData = $('#AdmFrm').serialize();
+        // 회원가입 요청을 서버로 보냄
+        $.ajax({
+            type: "POST",
+            url: "/Vopet/JoinAction.do",
+            data: frmData,
+            dataType: 'json',
+            success: function (response) {
+                if (response.rtnFlag === "Y") {
+                    alert("회원가입이 완료되었습니다. 로그인 페이지로 이동합니다.");
+                    //window.location.href = "/Vopet/Login.do";
+                } else {
+                    alert("회원가입 실패: " + response.rtnMsg);
+                }
+            },
+            error: function () {
+                alert("서버와의 통신 중 오류가 발생했습니다.");
+            }
+        });
+    });
+});
+</script>
+</html>

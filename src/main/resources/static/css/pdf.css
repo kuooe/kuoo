@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+html {
+	height:100%;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,input,select, button, textarea,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{	
+	padding:0px;
+	margin:0px;
+}
+
+h1 {
+	text-align: center;
+	font-size:50px;
+	padding: 15px;
+}
+
+body {
+	background:#fff;
+	color:#373737;
+	line-height:1.9;
+	font-family:'Open Sans', 'Nanum Gothic','나눔고딕', NanumGothic, Arial, Helvetica, sans-serif;
+}
+
+p {
+	text-align:center;
+}
+
+.etc-list {
+	padding-bottom:35px;
+}
+
+.tit {
+	line-height:1.4;
+	padding-bottom:20px;
+	color:#3f3f3f
+}
+
+.bbs-copyright {
+	margin-top:40px;
+	padding:10px 0;
+	border-top:1px solid #888;
+	border-bottom:1px solid #888;
+	text-align:center;
+	font-weight:700;
+}
+
+.tbl-style02 {
+    border-top: 2px solid #6f7b89;
+    border-right: 1px solid #cecece;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+
+caption {
+    overflow: hidden;
+    width: 0px;
+    height: 0px;
+    font-size: 0;
+    line-height: 0px;
+    text-indent: -9999em;
+    opacity: 0;
+}
+
+th {
+    padding: 8px 5px;
+    width:25px;
+    background: #f5f5f5;
+    text-align: center;
+}
+
+
+th {
+    padding: 8px 5px;
+    width:25px;
+    background: #f5f5f5;
+    text-align: center;
+}
+
+td {
+    padding: 8px 20px;
+    color: #505050;
+    width:75px;
+}
+
+.tbl-tit {
+    font-weight: bold;
+    line-height: 28px;
+    margin-bottom: 5px;
+}
+
+a {
+	
+}
+
+
+tr{border: 1px solid #707070 !important;}
+th{border: 1px solid #707070 !important;}
+td{border: 1px solid #707070 !important;}
