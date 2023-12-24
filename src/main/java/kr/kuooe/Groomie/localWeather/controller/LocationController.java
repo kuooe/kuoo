@@ -1,10 +1,9 @@
 package kr.kuooe.Groomie.localWeather.controller;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import io.swagger.annotations.Api;
+import kr.kuooe.Groomie.localWeather.service.vo.LocationVO;
+import kr.kuooe.Groomie.localWeather.service.vo.WeatherVO;
+import kr.kuooe.comm.utilityKuooe.GroomieUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -13,10 +12,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import io.swagger.annotations.Api;
-import kr.kuooe.Groomie.localWeather.service.vo.LocationVO;
-import kr.kuooe.Groomie.localWeather.service.vo.WeatherVO;
-import kr.kuooe.comm.utilityKuooe.GroomieUtil;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.util.HashMap;
+import java.util.Map;
 
 
 @Api(value = "LocationController")
